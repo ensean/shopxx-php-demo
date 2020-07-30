@@ -18,7 +18,7 @@
                 <h1>Simple PHP App</h1>
                 <h2>Congratulations</h2>
                 <p>Your PHP application is now running on a container in Amazon ECS.</p>
-                <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
+                <p>The server is running PHP version <?php echo phpversion(); ?>.</p>
             </div>
         </div>
 
