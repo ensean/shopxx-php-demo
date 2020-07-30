@@ -48,7 +48,7 @@
                             echo "</tr>"; 
                         }
                         echo "</table>"; 
-                        mysqli_free_res($res); 
+                        mysqli_free_result($res); 
                     } 
                     else { 
                         echo "No matching records are found."; 
