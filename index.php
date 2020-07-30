@@ -19,7 +19,7 @@
                 <h2>Congratulations</h2>
                 <p>The server is running PHP version <?php echo phpversion(); ?>.</p>
             </div>
-            <div>
+            <div class="hero-unit">
                 <?php  
                 $link = mysqli_connect("mysql-shopxx.czagvy5trygi.us-west-2.rds.amazonaws.com", "admin", "", "shopxx"); 
                 
@@ -30,7 +30,7 @@
                 $sql = "SELECT * FROM customer"; 
                 if ($res = mysqli_query($link, $sql)) { 
                     if (mysqli_num_rows($res) > 0) { 
-                        echo "<table>"; 
+                        echo "<table class='table'>"; 
                         echo "<tr>"; 
                         echo "<th>Firstname</th>"; 
                         echo "<th>Lastname</th>"; 
