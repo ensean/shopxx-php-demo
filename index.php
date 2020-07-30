@@ -23,9 +23,8 @@
                 <?php  
                 $link = mysqli_connect("mysql-shopxx.czagvy5trygi.us-west-2.rds.amazonaws.com", "admin", "", "shopxx"); 
                 
-                if ($link == = false) { 
-                    die("ERROR: Could not connect. "
-                                .mysqli_connect_error()); 
+                if ($link == false) { 
+                    die("ERROR: Could not connect. ".mysqli_connect_error()); 
                 } 
                 
                 $sql = "SELECT * FROM Data"; 
@@ -47,7 +46,7 @@
                             echo "<td>".$row['gender']."</td>"; 
                             echo "<td>".$row['status']."</td>"; 
                             echo "</tr>"; 
-                        } 
+                        }
                         echo "</table>"; 
                         mysqli_free_res($res); 
                     } 
@@ -56,8 +55,7 @@
                     } 
                 } 
                 else { 
-                    echo "ERROR: Could not able to execute $sql. "
-                                                .mysqli_error($link); 
+                    echo "ERROR: Could not able to execute $sql. ".mysqli_error($link); 
                 } 
                 mysqli_close($link); 
                 ?> 
