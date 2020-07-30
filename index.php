@@ -60,6 +60,24 @@
                 mysqli_close($link); 
                 ?> 
             </div>
+            <div class="hero-unit">
+            <?php
+            function fibonacci_seq($n){
+                if($n<1){
+                    return -1;
+                }
+                $ret = array();
+                $ret[1]=$ret[2]=1;
+                for($i=3;$i<=$n;$i++){
+                    $ret[$i]=$ret[$i-1]+$ret[$i-2];
+                    print $ret[$i];
+                    print “</br>”;
+                }
+                return $ret[$n];
+            }
+            fibonacci_seq(100)
+            ?>
+            </div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
