@@ -27,7 +27,7 @@
                     die("ERROR: Could not connect. ".mysqli_connect_error()); 
                 } 
                 
-                $sql = "SELECT * FROM Data"; 
+                $sql = "SELECT * FROM customer"; 
                 if ($res = mysqli_query($link, $sql)) { 
                     if (mysqli_num_rows($res) > 0) { 
                         echo "<table>"; 
