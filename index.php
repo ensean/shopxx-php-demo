@@ -66,20 +66,20 @@
             </div>
             <div class="hero-unit">
             <?php
-            function fibonacci_seq($n){
-                if($n<1){
-                    return -1;
+            function monte_carlo_pi($n){
+                $m=0;
+                for($i=0;$i<$n;$i++){
+                    $x = mt_rand() / mt_getrandmax();
+                    $y = mt_rand() / mt_getrandmax();
+                    if(pow($x, 2) + pow($y, 2) <= 1){
+                        $m = $m +1;
+                    }
                 }
-                $ret = array();
-                $ret[1]=$ret[2]=1;
-                for($i=3;$i<=$n;$i++){
-                    $ret[$i]=$ret[$i-1]+$ret[$i-2];
-                    print $ret[$i];
-                    print "</br>";
-                }
-                return $ret[$n];
+                return 4 * $m/$n;
             }
-            fibonacci_seq(100)
+            monte_carlo_pi(10000);
+            monte_carlo_pi(1000000);
+            monte_carlo_pi(100000000);
             ?>
             </div>
         </div>
