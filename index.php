@@ -20,11 +20,12 @@
                 <p>The server is running PHP version <?php echo phpversion(); ?>.</p>
             </div>
             <div class="hero-unit">
-                <?php  
-                $link = mysqli_connect(ini_get("mysql.default.host"),
-                                       ini_get("mysql.default.user"), 
-                                       ini_get("mysql.default.password"),
-                                       "shopxx"); 
+                <?php
+                $ini= parse_ini_file("../shopxx.ini");
+                $link = mysqli_connect($ini["db_host"],
+                                       $ini["db_user"],
+                                       $ini["db_pass"],
+                                       "shopxx");
                 
                 if ($link == false) { 
                     die("ERROR: Could not connect. ".mysqli_connect_error()); 
