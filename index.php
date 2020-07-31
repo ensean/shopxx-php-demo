@@ -77,9 +77,13 @@
                 }
                 return 4 * $m/$n;
             }
-            monte_carlo_pi(10000);
-            monte_carlo_pi(1000000);
-            monte_carlo_pi(100000000);
+            print "Pi from 10000 tries: ";
+            print monte_carlo_pi(10000);
+            print "</br>";
+            print "Pi from 100000 tries: ";
+            print monte_carlo_pi(100000);
+            print "</br>";       
+
             ?>
             </div>
         </div>
