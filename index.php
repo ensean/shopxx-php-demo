@@ -21,7 +21,10 @@
             </div>
             <div class="hero-unit">
                 <?php  
-                $link = mysqli_connect("mysql-shopxx.czagvy5trygi.us-west-2.rds.amazonaws.com", "admin", "", "shopxx"); 
+                $link = mysqli_connect(ini_get("mysql.default.host"),
+                                       ini_get("mysql.default.user"), 
+                                       ini_get("mysql.default.password"),
+                                       "shopxx"); 
                 
                 if ($link == false) { 
                     die("ERROR: Could not connect. ".mysqli_connect_error()); 
