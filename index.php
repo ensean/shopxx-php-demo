@@ -85,6 +85,15 @@
             print "</br>";
             ?>
             </div>
+            <div class="hero-unit">
+            <?php
+
+                $dnsname = file_get_contents("http://169.254.169.254/latest/meta-data/public-hostname");
+                print "This page is served by: ";
+                print $dnsname;
+                print "</br>";
+            ?>
+            </div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
