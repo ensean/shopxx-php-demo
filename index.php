@@ -17,6 +17,12 @@
             <div class="hero-unit">
                 <h1>Simple PHP App</h1>
                 <h2>Congratulations</h2>
+                <?php
+                    $dnsname = file_get_contents("http://169.254.169.254/latest/meta-data/public-hostname");
+                    print "This page is served by: ";
+                    print $dnsname;
+                    print "</br>";                
+                ?>
                 <p>The server is running PHP version <?php echo phpversion(); ?>.</p>
             </div>
             <div class="hero-unit">
@@ -83,15 +89,6 @@
             print "Pi from 1000000 tries: ";
             print monte_carlo_pi(1000000);
             print "</br>";
-            ?>
-            </div>
-            <div class="hero-unit">
-            <?php
-
-                $dnsname = file_get_contents("http://169.254.169.254/latest/meta-data/public-hostname");
-                print "This page is served by: ";
-                print $dnsname;
-                print "</br>";
             ?>
             </div>
         </div>
