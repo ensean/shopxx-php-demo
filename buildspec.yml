@@ -8,4 +8,4 @@ artifacts:
   files:
     - 'assets/**/*'
     - 'index.php'
-  name: $CODEBUILD_SOURCE_VERSION/shopxx-$CODEBUILD_BUILD_NUMBER
+  name: shopxx-$CODEBUILD_BUILD_NUMBER.zip
