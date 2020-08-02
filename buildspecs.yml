@@ -1,0 +1,9 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo 'pretend to be build'
+artifacts:
+  files:
+    - '**/*'
