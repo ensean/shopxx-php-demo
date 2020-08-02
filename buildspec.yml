@@ -6,4 +6,5 @@ phases:
       - echo 'pretend to be build'
 artifacts:
   files:
-    - '**/*'
+    - 'assets/
+    - 'index.php'
