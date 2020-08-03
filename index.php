@@ -71,25 +71,7 @@
                 ?> 
             </div>
             <div class="hero-unit">
-            <?php
-            function monte_carlo_pi($n){
-                $m=0;
-                for($i=0;$i<$n;$i++){
-                    $x = mt_rand() / mt_getrandmax();
-                    $y = mt_rand() / mt_getrandmax();
-                    if(pow($x, 2) + pow($y, 2) <= 1){
-                        $m = $m +1;
-                    }
-                }
-                return 4 * $m/$n;
-            }
-            print "Pi from 10000 tries: ";
-            print monte_carlo_pi(10000);
-            print "</br>";
-            print "Pi from 1000000 tries: ";
-            print monte_carlo_pi(1000000);
-            print "</br>";
-            ?>
+            
             </div>
         </div>
 
