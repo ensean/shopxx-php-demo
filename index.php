@@ -72,11 +72,11 @@
             </div>
             <div class="hero-unit">
             <?php
+            $headers = apache_request_headers();
 
-            foreach (getallheaders() as $name => $value) {
-                echo "$name: $value\n";
+            foreach ($headers as $header => $value) {
+                echo "$header: $value <br />\n";
             }
-
             ?>
             </div>
         </div>
