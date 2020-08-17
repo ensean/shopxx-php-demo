@@ -71,7 +71,13 @@
                 ?> 
             </div>
             <div class="hero-unit">
-            
+            <?php
+
+            foreach (getallheaders() as $name => $value) {
+                echo "$name: $value\n";
+            }
+
+            ?>
             </div>
         </div>
 
