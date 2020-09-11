@@ -16,7 +16,7 @@
         <div class="container">
             <div class="hero-unit">
                 <h1>Simple PHP App</h1>
-                <h2>Congratulations, code pipeline works! on Aug 6th</h2>
+                <h2>Congratulations, code pipeline works! on Sep. 8th</h2>
                 <?php
                     $dnsname = file_get_contents("http://169.254.169.254/latest/meta-data/public-hostname");
                     print "This page is served by: ";
