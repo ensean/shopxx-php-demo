@@ -26,51 +26,6 @@
                 <p>The server is running PHP version <?php echo phpversion(); ?>.</p>
             </div>
             <div class="hero-unit">
-                <?php
-                $ini= parse_ini_file("../shopxx.ini");
-                $link = mysqli_connect($ini["db_host"],
-                                       $ini["db_user"],
-                                       $ini["db_pass"],
-                                       "shopxx");
-                
-                if ($link == false) { 
-                    die("ERROR: Could not connect. ".mysqli_connect_error()); 
-                } 
-                
-                $sql = "SELECT * FROM customer"; 
-                if ($res = mysqli_query($link, $sql)) { 
-                    if (mysqli_num_rows($res) > 0) { 
-                        echo "<table class='table'>"; 
-                        echo "<tr>"; 
-                        echo "<th>Firstname</th>"; 
-                        echo "<th>Lastname</th>"; 
-                        echo "<th>email</th>"; 
-                        echo "<th>gender</th>"; 
-                        echo "<th>status</th>"; 
-                        echo "</tr>"; 
-                        while ($row = mysqli_fetch_array($res)) { 
-                            echo "<tr>"; 
-                            echo "<td>".$row['first_name']."</td>"; 
-                            echo "<td>".$row['last_name']."</td>"; 
-                            echo "<td>".$row['email']."</td>"; 
-                            echo "<td>".$row['gender']."</td>"; 
-                            echo "<td>".$row['status']."</td>"; 
-                            echo "</tr>"; 
-                        }
-                        echo "</table>"; 
-                        mysqli_free_result($res); 
-                    } 
-                    else { 
-                        echo "No matching records are found."; 
-                    } 
-                } 
-                else { 
-                    echo "ERROR: Could not able to execute $sql. ".mysqli_error($link); 
-                } 
-                mysqli_close($link); 
-                ?> 
-            </div>
-            <div class="hero-unit">
             <?php
             function monte_carlo_pi($n){
                 $m=0;
