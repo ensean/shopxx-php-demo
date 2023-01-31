@@ -18,10 +18,17 @@
                 <h1>Simple PHP App</h1>
                 <h2>Congratulations, code pipeline works!</h2>
                 <?php
-                    $dnsname = file_get_contents("http://169.254.169.254/latest/meta-data/public-hostname");
+                    $instance_id = file_get_contents("http://169.254.169.254/latest/meta-data/instance-id");
+                    $instance_type = file_get_contents("http://169.254.169.254/latest/meta-data/instance-type");
+                    $instance_az = file_get_contents("http://169.254.169.254/latest/meta-data/placement/availability-zone");
                     print "This page is served by: ";
-                    print $dnsname;
-                    print "</br>";                
+                    print "<br>";
+                    print "\tInstance ID: " . $instance_id;
+                    print "<br>";
+                    print "\tInstance Type: " . $instance_type;
+                    print "<br>";
+                    print "\tInstance AZ: " . $instance_az;
+                    print "</br>";
                 ?>
                 <p>The server is running PHP version <?php echo phpversion(); ?>.</p>
             </div>
@@ -38,10 +45,10 @@
                 }
                 return 4 * $m/$n;
             }
-            print "Pi from 10000 tries: ";
+            print "Pi from 10000 interations: ";
             print monte_carlo_pi(10000);
             print "</br>";
-            print "Pi from 1000000 tries: ";
+            print "Pi from 1000000 interations: ";
             print monte_carlo_pi(1000000);
             print "</br>";
             ?>
