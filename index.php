@@ -16,7 +16,6 @@
         <div class="container">
             <div class="hero-unit">
                 <h1>Simple PHP App</h1>
-                <h2>Congratulations, code pipeline works!</h2>
                 <?php
                     $instance_id = file_get_contents("http://169.254.169.254/latest/meta-data/instance-id");
                     $instance_type = file_get_contents("http://169.254.169.254/latest/meta-data/instance-type");
